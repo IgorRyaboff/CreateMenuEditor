@@ -1,0 +1,27 @@
+﻿<Window x:Class="CreateMenuEditor.WindowAdd"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CreateMenuEditor"
+        mc:Ignorable="d"
+        Title="Add new element..." Height="303" Width="318" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="Extension:" VerticalAlignment="Top" Height="16"/>
+        <TextBox x:Name="tbxExt" Height="23" Margin="10,31,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock Margin="10,71.333,10,0" TextWrapping="Wrap" Text="Display name:" VerticalAlignment="Top" Height="16"/>
+        <TextBox x:Name="tbxDisplayName" Height="23" Margin="10,92.333,10,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <RadioButton Content="Create empty file" Margin="10,145.998,10,0" VerticalAlignment="Top" GroupName="fileNameChoose" IsChecked="True"/>
+        <RadioButton x:Name="rbtnIsTemplate" Content="Create file from template" Margin="10,165.998,10,0" VerticalAlignment="Top" GroupName="fileNameChoose" Checked="RbtnIsTemplate_Checked" Unchecked="RbtnIsTemplate_Unchecked"/>
+        <Grid x:Name="fileTemplateGrid" Visibility="Hidden" Height="46.669" Margin="10,191.331,10,0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock TextWrapping="Wrap" Text="File template (relative to C:\Windows):" VerticalAlignment="Top" Height="16"/>
+            <TextBox x:Name="tbxFileName" Margin="0,21,0,2.007" TextWrapping="Wrap"/>
+        </Grid>
+        <Button x:Name="btnCancel" Content="Cancel" Margin="225,243,10,9" Click="BtnCancel_Click"/>
+        <Button x:Name="btnConfirm" Content="Confirm" Margin="145,243,90,9" Click="BtnConfirm_Click"/>
+
+    </Grid>
+</Window>
