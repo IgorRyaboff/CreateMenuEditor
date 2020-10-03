@@ -10,8 +10,9 @@ namespace CreateMenuEditor
     {
         public MainWindow()
         {
+            new WindowLicense().ShowDialog();
             InitializeComponent();
-            //Refresh();
+            Refresh();
         }
 
         public void Refresh()
@@ -73,6 +74,11 @@ namespace CreateMenuEditor
             process.StartInfo.FileName = "cmd.exe";
             process.StartInfo.Arguments = "/c taskkill /f /im explorer.exe && explorer";
             process.Start();
+        }
+
+        private void BtnAbout_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/IgorRyaboff/CreateMenuEditor");
         }
     }
 

@@ -15,6 +15,7 @@
         <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="52" Click="RefreshBtn_Click"/>
         <Button x:Name="delBtn" Content="Delete" HorizontalAlignment="Left" Margin="124,10,0,0" VerticalAlignment="Top" Width="52" Click="DelBtn_Click"/>
         <Button x:Name="btnRestartExplorer" Content="Restart Explorer" Margin="181,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="95" Click="BtnRestartExplorer_Click"/>
+        <Button x:Name="btnAbout" Content="GitHub page" Margin="485,10,10,0" VerticalAlignment="Top" Click="BtnAbout_Click"/>
 
     </Grid>
 </Window>
