@@ -18,7 +18,7 @@ namespace CreateMenuEditor
     /// </summary>
     public partial class WindowLicense : Window
     {
-        bool accepted = false;
+        public bool accepted = false;
         public WindowLicense()
         {
             InitializeComponent();
@@ -26,18 +26,13 @@ namespace CreateMenuEditor
 
         private void BtnCancel_Click(object sender, RoutedEventArgs e)
         {
-            Application.Current.Shutdown();
+            Close();
         }
 
         private void BtnAccept_Click(object sender, RoutedEventArgs e)
         {
             accepted = true;
             Close();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            if (!accepted) Application.Current.Shutdown();
         }
     }
 }

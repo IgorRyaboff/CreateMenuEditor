@@ -8,14 +8,15 @@
         Title="CreateMenuEditor" Height="361" Width="576" WindowStartupLocation="CenterScreen" ResizeMode="CanMinimize">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="469*"/>
+            <ColumnDefinition Width="107*"/>
         </Grid.ColumnDefinitions>
-        <ListBox x:Name="list" Margin="10,35,10,10"/>
-        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Width="52" Click="AddBtn_Click"/>
-        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="52" Click="RefreshBtn_Click"/>
-        <Button x:Name="delBtn" Content="Delete" HorizontalAlignment="Left" Margin="124,10,0,0" VerticalAlignment="Top" Width="52" Click="DelBtn_Click"/>
-        <Button x:Name="btnRestartExplorer" Content="Restart Explorer" Margin="181,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="95" Click="BtnRestartExplorer_Click"/>
-        <Button x:Name="btnAbout" Content="GitHub page" Margin="485,10,10,0" VerticalAlignment="Top" Click="BtnAbout_Click"/>
+        <ListBox x:Name="list" Margin="10,35,10,10" Grid.ColumnSpan="2"/>
+        <Button x:Name="addBtn" Content="Add" HorizontalAlignment="Left" Margin="67,10,0,0" VerticalAlignment="Top" Width="52" Click="AddBtn_Click" Height="20"/>
+        <Button x:Name="refreshBtn" Content="Refresh" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="52" Click="RefreshBtn_Click" Height="20"/>
+        <Button x:Name="delBtn" Content="Delete" HorizontalAlignment="Left" Margin="124,10,0,0" VerticalAlignment="Top" Width="52" Click="DelBtn_Click" Height="20"/>
+        <Button x:Name="btnRestartExplorer" Content="Restart Explorer" Margin="0,10,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="96" Click="BtnRestartExplorer_Click" Height="20"/>
+        <Button x:Name="btnAbout" Content="GitHub page" Margin="0,10,10,0" VerticalAlignment="Top" Click="BtnAbout_Click" Grid.Column="1" Height="20" HorizontalAlignment="Right" Width="77"/>
 
     </Grid>
 </Window>

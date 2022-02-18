@@ -10,9 +10,14 @@ namespace CreateMenuEditor
     {
         public MainWindow()
         {
-            new WindowLicense().ShowDialog();
-            InitializeComponent();
-            Refresh();
+            WindowLicense windowLicense = new WindowLicense();
+            windowLicense.ShowDialog();
+            if (windowLicense.accepted)
+            {
+                InitializeComponent();
+                Refresh();
+            }
+            else Close();
         }
 
         public void Refresh()
@@ -50,6 +55,11 @@ namespace CreateMenuEditor
             else
             {
                 Item item = ((listItem)list.SelectedItem).item;
+                if (item.IsDangerousToDelete())
+                {
+                    MessageBox.Show("Deleting this entry is dangerous and is not allowed by this program. If you really want to delete it, do it via registry yourself", "Protected extension", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    return;
+                }
                 if (MessageBox.Show($"Are you sure you want to delete \"{item.displayName}\" ({item.extension}) from create menu?",
                     "Warning", MessageBoxButton.YesNo, MessageBoxImage.Question) == MessageBoxResult.Yes)
                 {
@@ -100,6 +110,7 @@ namespace CreateMenuEditor
             if (shellNewKey.GetValue("FileName") != null) fileName = (string)shellNewKey.GetValue("FileName");
 
             className = (string)rootKey.GetValue("");
+            if (className == null) return;
             RegistryKey displayNameClass = Registry.ClassesRoot.OpenSubKey(className);
             if (displayNameClass == null) return;
             if (displayNameClass.GetValue("") == null) return;
@@ -141,6 +152,16 @@ namespace CreateMenuEditor
             rootKey.Close();
 
             if (className == ("CreateMenuEditor_" + extension)) Registry.ClassesRoot.DeleteSubKey(className);
+        }
+
+        public bool IsDangerousToDelete()
+        {
+            string[] extensions = { ".lnk", ".library-ms" };
+            foreach (string etx in extensions)
+            {
+                if (this.extension == etx) return true;
+            }
+            return false;
         }
     }
 }

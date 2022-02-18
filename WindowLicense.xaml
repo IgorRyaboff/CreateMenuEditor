@@ -5,15 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CreateMenuEditor"
         mc:Ignorable="d"
-        Title="License" Height="371" Width="435" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Closing="Window_Closing">
+        Title="License" Height="371" Width="435" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Margin="10,10,10,0" TextWrapping="Wrap" Text="By using CreateMenuEditor, you agree with license conditions below" VerticalAlignment="Top" Height="22" TextAlignment="Center"/>
-        <Button x:Name="btnCancel" Content="Cancel" Margin="342,310,10,10" Click="BtnCancel_Click"/>
-        <Button x:Name="btnAccept" Content="Accept" Margin="262,310,90,10" Click="BtnAccept_Click"/>
-        <TextBox AcceptsReturn="True" IsReadOnly="True" Margin="10,37" TextWrapping="Wrap" Text="Copyright © 2020 Igor Ryaboff (https://github.com/IgorRyaboff)&#xA;&#xA;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&#xA;&#xA;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&#xA;&#xA;THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."/>
+        <Button x:Name="btnCancel" Content="Cancel" Margin="342,0,10,18" Click="BtnCancel_Click" Height="27" VerticalAlignment="Bottom"/>
+        <Button x:Name="btnAccept" Content="Accept" Margin="254,0,98,18" Click="BtnAccept_Click" Height="27" VerticalAlignment="Bottom"/>
+        <TextBox AcceptsReturn="True" IsReadOnly="True" Margin="10,37,10,50" TextWrapping="Wrap" Text="Copyright © 2020-2022 Igor Ryaboff (https://github.com/IgorRyaboff)&#xA;&#xA;Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the Software), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:&#xA;&#xA;The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.&#xA;&#xA;THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."/>
 
     </Grid>
 </Window>
